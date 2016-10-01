@@ -1,0 +1,25 @@
+---
+title: "PA1_template"
+output: html_document
+---
+# Coursera Data Science Specialization | Reproducible Research | Week 2 Peer Graded Assignment
+
+## Loading and preprocessing the data
+
+Download the file to the working directory and format:
+
+```{r download}
+fileURL <- "https://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
+
+# Download file
+download.file(fileURL, destfile = "data.zip")
+
+# Unzip file and unlink the zip file
+data.zip <- unzip("data.zip")
+unlink("data.zip")
+
+# Unzip the file to workspace
+data <- read.csv(data.zip,
+                sep = ",")
+```
+
